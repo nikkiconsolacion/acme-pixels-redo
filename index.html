@@ -1,11 +1,31 @@
 <html>
   <head>
     <style>
+
     </style>
   </head>
   <body>
-
+    <h1>Acme Pixels</h1>
+    <div id='grid'>
+      <!-- Populate html here -->
+    </div>
     <script>
+      const grid = document.querySelector('#grid');
+
+      const generateNxN = (n) => {
+        const rows = [];
+        for (let i = 0; i < n; i++) {
+          const col = [];
+          rows.push(col); // fill rows with columns
+          for (let j = 0; j < n; j++) {
+            col.push(0); //fill columns with value of zero
+          }
+        }
+        return rows; // returns the grid, or array of arrays
+      }
+
+      const data = generateNxN(3); // sets variable 'data' to a 3x3 grid w/ values of zero in each cell
+      console.log(data);
     </script>
   </body>
 </html>
